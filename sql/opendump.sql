@@ -1,0 +1,2 @@
+(select 'PID', 'TOTAL_AREA', 'CITY_CODE', 'PROP_NAME', 'SITUS', 'CITY_SITUS', 'ZIP_SITUS', 'county', 'latitude', 'longitude', 'location_type', 'good', 'building_type') UNION (select PID, TOTAL_AREA, CITY_CODE, PROP_NAME, SITUS, CITY_SITUS, ZIP_SITUS, county, latitude, longitude, location_type, good, building_type from buildings into outfile '/tmp/commercial_buildings.csv' fields enclosed by '"' terminated by ',' escaped by '"' lines terminated by '\n'); 
+
